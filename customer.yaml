@@ -1,17 +1,18 @@
-{
-   "airtel":
-    {
+
+[
+     {
+      "name": "airtel",
       "bomfile":"airtel.json",
       "enabled":"true"
-   },
-   "vodafone":
+    },
     {
+     "name":"vodafone",
       "bomfile":"vodafone.json",
-      "enabled":"false"
+      "enabled":"true"
    },
-   "jio":
-     {
-      "bomfile":"jio.json",
-      "enabled":"false"
+   {
+     "name":"jio",
+     "bomfile":"jio.json",
+     "enabled":"true"
    }
-}
+]
