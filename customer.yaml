@@ -1,6 +1,4 @@
-{
-"customers":
-    {
+ {
     "customer":
     [
       {
@@ -19,5 +17,4 @@
        "enabled":"true"
        }
     ]
-}
 }
