@@ -1,18 +1,23 @@
-
-[
-     {
+{
+"customers":
+    {
+    "customer":
+    [
+      {
       "name": "airtel",
       "bomfile":"airtel.json",
       "enabled":"true"
-    },
-    {
-     "name":"vodafone",
+      },
+      {
+      "name":"vodafone",
       "bomfile":"vodafone.json",
-      "enabled":"true"
-   },
-   {
-     "name":"jio",
-     "bomfile":"jio.json",
-     "enabled":"true"
-   }
-]
+      "enabled":"false"
+       },
+       {
+       "name":"jio",
+       "bomfile":"jio.json",
+       "enabled":"true"
+       }
+    ]
+}
+}
