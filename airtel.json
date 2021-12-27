@@ -1,0 +1,25 @@
+{
+   "env":[
+      {
+         "install":"true",
+         "image":"nginx:1.17",
+         "account":"default",
+         "namespace":"nginx",
+         "pipelinename":"aitel-germany"
+      },
+      {
+         "install":"false",
+         "image":"postgres:10-alpine",
+         "account":"saas",
+         "namespace":"postgres",
+         "pipelinename":"aitel-us"
+      },
+      {
+         "install":"true",
+         "image":"restapp:gradle-restapp-22",
+         "account":"prod",
+         "namespace":"restapp",
+         "pipelinename":"aitel-spain"
+      }
+   ]
+}
