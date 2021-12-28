@@ -1,13 +1,15 @@
 {
    "env":[
-      {
+      {  
+         "appname":"airtelgem",
          "install":"true",
          "image":"nginx:1.17",
          "account":"default",
          "namespace":"nginx",
          "pipelinename":"airtel-germany"
       },
-      {
+      {   
+         "appname":"airtelus",
          "install":"false",
          "image":"postgres:10-alpine",
          "account":"saas",
@@ -15,11 +17,12 @@
          "pipelinename":"airtel-us"
       },
       {
+         "appname":"airtelind",
          "install":"true",
          "image":"restapp:gradle-restapp-22",
          "account":"prod",
          "namespace":"restapp",
-         "pipelinename":"airtel-spain"
+         "pipelinename":"airtel-india"
       }
    ]
 }
