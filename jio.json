@@ -1,0 +1,28 @@
+{
+   "env":[
+      {  
+         "appname":"nsentest",
+         "install":"true",
+         "image":"nginx:1.17",
+         "account":"default",
+         "namespace":"nginx",
+         "pipelinename":"jio-germany"
+      },
+      {   
+         "appname":"nsentest",
+         "install":"false",
+         "image":"postgres:10-alpine",
+         "account":"saas",
+         "namespace":"postgres",
+         "pipelinename":"jio-aus"
+      },
+      {
+         "appname":"nsentest",
+         "install":"true",
+         "image":"restapp:gradle-restapp-22",
+         "account":"prod",
+         "namespace":"restapp",
+         "pipelinename":"jio-india"
+      }
+   ]
+}
