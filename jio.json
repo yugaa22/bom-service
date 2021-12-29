@@ -2,7 +2,7 @@
    "env":[
       {  
          "appname":"nsentest",
-         "install":"true",
+         "install":"false",
          "image":"nginx:1.17",
          "account":"default",
          "namespace":"nginx",
