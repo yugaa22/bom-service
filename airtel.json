@@ -1,7 +1,7 @@
 {
    "env":[
       {  
-         "appname":"multiclouddemo",
+         "appname":"nsentest",
          "install":"true",
          "image":"nginx:1.17",
          "account":"default",
@@ -9,7 +9,7 @@
          "pipelinename":"airtel-germany"
       },
       {   
-         "appname":"airtelus",
+         "appname":"nsentest",
          "install":"false",
          "image":"postgres:10-alpine",
          "account":"saas",
@@ -17,7 +17,7 @@
          "pipelinename":"airtel-us"
       },
       {
-         "appname":"multiclouddemo",
+         "appname":"nsentest",
          "install":"true",
          "image":"restapp:gradle-restapp-22",
          "account":"prod",
