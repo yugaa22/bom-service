@@ -4,12 +4,12 @@
       {
       "name": "airtel",
       "bomfile":"airtel.json",
-      "enabled":"true"
+      "enabled":"false"
       },
       {
       "name":"vodafone",
       "bomfile":"vodafone.json",
-      "enabled":"false"
+      "enabled":"true"
        },
        {
        "name":"jio",
