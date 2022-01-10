@@ -1,3 +1,3 @@
 # bom-service 
 
-For change only git ,it will trigget pipeline of parent
+For change only git ,it will trigget pipeline 
