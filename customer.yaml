@@ -4,7 +4,7 @@
       {
       "name": "airtel",
       "bomfile":"airtel.json",
-      "enabled":"false"
+      "enabled":"true"
       },
       {
       "name":"vodafone",
