@@ -15,11 +15,6 @@
        "name":"jio",
        "bomfile":"jio.json",
        "enabled":"false"
-       },
-       {
-       "name":"bsnl",
-       "bomfile":"bsnl.json",
-       "enabled":"true"
        }
     ]
 }
