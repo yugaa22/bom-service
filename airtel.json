@@ -1,28 +1,34 @@
 {
-   "env":[
-      {  
-         "install":"true",
-         "image":"nginx:1.17",
-         "account":"default",
-         "namespace":"nginx",
-         "appname":"nsentest",
-         "pipelinename":"airtel-germany"
-      },
-      {   
-         "install":"false",
-         "image":"postgres:10-alpine",
-         "account":"saas",
-         "namespace":"postgres",
-         "appname":"nsentest",
-         "pipelinename":"airtel-us"
-      },
-      {
-         "install":"true",
-         "image":"restapp:gradle-restapp-22",
-         "account":"prod",
-         "namespace":"restapp",
-         "appname":"nsentest",
-         "pipelinename":"airtel-india"
-      }
-   ]
+	"env": [{
+			"install": "true",
+			"appname": "nsentest",
+			"pipelinename": "airtel-germany",
+			"params": {
+				"image": "nginx:1.17",
+				"account": "default",
+				"namespace": "nginx"
+			}
+
+		},
+		{
+			"install": "false",
+			"appname": "nsentest",
+			"pipelinename": "airtel-us",
+			"params": {
+				"image": "postgres:10-alpine",
+				"account": "saas",
+				"namespace": "postgres"
+			}
+		},
+		{
+			"install": "true",
+			"appname": "nsentest",
+			"pipelinename": "airtel-india",
+			"params": {
+				"image": "restapp:gradle-restapp-22",
+				"account": "prod",
+				"namespace": "restapp"
+			}
+		}
+	]
 }
