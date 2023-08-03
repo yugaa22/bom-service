@@ -1,0 +1,60 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: bomservice
+  labels:
+    webhook: test
+  namespace: default
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      containers:
+        - args:
+            - >-
+              cd /usr/src
+
+
+              git clone https://github.com/OpsMx/bom-service.git
+
+              cd bom-service
+
+              clientname=$(cat customer.yaml | jq -c '.[]' | jq '.[] |
+              select(.enabled=="true")|.name' )
+
+              echo $clientname
+
+              for customer in $clientname
+                do
+                   echo "Working on $customer now"
+                   getbomfile=$(cat customer.yaml| jq -r '.[]' | jq -r '.[] | select(.name=='$customer')|.bomfile')
+                   for bom in $getbomfile
+                  do
+                     getenv=$(cat "$bom" | jq -r '.[]' | jq -r '.[] | select(.install=="true")|.pipelinename')
+                     for pipe in $getenv
+                     do
+                       getapp=$(cat "$bom" | jq -r '.[]' | jq -r '.[] | select(.pipelinename=="'$pipe'")|.appname')
+                       echo ""
+                       spin pipeline execute --name $pipe --application $getapp
+                     done
+                  done
+                done
+                
+                sleep 30d
+          command:
+            - /bin/sh
+            - +x
+            - '-c'
+          image: 'quay.io/opsmxpublic/spincli:1.21.0'
+          name: testservice
+          volumeMounts:
+            - mountPath: /root/.spin/config
+              name: opsmx-spin-cli-config
+              subPath: config
+      imagePullSecrets:
+        - name: quay-registry
+      restartPolicy: Never
+      volumes:
+        - name: opsmx-spin-cli-config
+          secret:
+            secretName: spin-cli-config
